@@ -1,0 +1,1 @@
+This telegram bot is designed to help you learn English. You can record a voice message to him and he will also respond with his voice. That is, you can have a full conversation with him and simultaneously correct grammar.
