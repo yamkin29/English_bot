@@ -19,15 +19,15 @@
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
     <data name="OPENAI_KEY" xml:space="preserve">
-        <value>6558371383:AAG-tkC2qQagSr5Sx4GjZ_I6C0-2oyYoKXc</value>
+        <value>openai_key</value>
     </data>
     <data name="INITIAL_PROMT" xml:space="preserve">
-        <value>You are a helpful assistant</value>
+        <value>I want you to act as a spoken English teacher and improver. I will speak to you in English and you will reply to me in English to practice my spoken English. I want you to keep your reply neat, limiting the reply to 100 words. I want you to strictly correct my grammar mistakes, typos, and factual errors. I want you to ask me a question in your reply. Now let's start practicing, you could ask me a question first. Remember, I want you to strictly correct my grammar mistakes, typos, and factual errors.</value>
     </data>
     <data name="BOT_TOKEN" xml:space="preserve">
-        <value>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</value>
+        <value>telegram_bot_token</value>
     </data>
     <data name="ELEVENLABS_API_KEY" xml:space="preserve">
-        <value>61e511897f75081451c0e074526397d8</value>
+        <value>elevenlabs_api_key</value>
     </data>
 </root>

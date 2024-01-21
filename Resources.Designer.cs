@@ -60,7 +60,7 @@ namespace English_bot {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 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.
+        ///   Looks up a localized string similar to telegram_bot_token.
         /// </summary>
         internal static string BOT_TOKEN {
             get {
@@ -69,7 +69,7 @@ namespace English_bot {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 61e511897f75081451c0e074526397d8.
+        ///   Looks up a localized string similar to elevenlabs_api_key.
         /// </summary>
         internal static string ELEVENLABS_API_KEY {
             get {
@@ -78,7 +78,7 @@ namespace English_bot {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to You are a helpful assistant.
+        ///   Looks up a localized string similar to I want you to act as a spoken English teacher and improver. I will speak to you in English and you will reply to me in English to practice my spoken English. I want you to keep your reply neat, limiting the reply to 100 words. I want you to strictly correct my grammar mistakes, typos, and factual errors. I want you to ask me a question in your reply. Now let&apos;s start practicing, you could ask me a question first. Remember, I want you to strictly correct my grammar mistakes, typos, and factual errors..
         /// </summary>
         internal static string INITIAL_PROMT {
             get {
@@ -87,7 +87,7 @@ namespace English_bot {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 6558371383:AAG-tkC2qQagSr5Sx4GjZ_I6C0-2oyYoKXc.
+        ///   Looks up a localized string similar to openai_key.
         /// </summary>
         internal static string OPENAI_KEY {
             get {

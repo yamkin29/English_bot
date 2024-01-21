@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "wv6gqBGEuApfKuZBxoeW3/5qCoYh4aMggQrWjZukOmil8vj/Ff+sAfopLJ9YjSe0Bhl15cITZL4f0KDAi90Ojw==",
+  "dgSpecHash": "SPX8vfztHTbRgQa/hvNlDJHHIl0b5aMYuxOhrO+b1EenZsXVdKXvcvXBPvDlCwW9t7URPxsW2b0ELpZBxYazRg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\dartw\\RiderProjects\\English_bot\\English_bot\\English_bot.csproj",
+  "projectFilePath": "C:\\Users\\dartw\\Downloads\\38833FF26BA1D.UnigramPreview_g9c9v27vpyspw!App\\English_bot\\English_bot\\English_bot\\English_bot.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\dartw\\.nuget\\packages\\betalgo.openai\\7.4.1\\betalgo.openai.7.4.1.nupkg.sha512",
     "C:\\Users\\dartw\\.nuget\\packages\\elevenlabs-dotnet\\2.1.0\\elevenlabs-dotnet.2.1.0.nupkg.sha512",
@@ -32,7 +32,11 @@
     "C:\\Users\\dartw\\.nuget\\packages\\system.security.accesscontrol\\4.7.0\\system.security.accesscontrol.4.7.0.nupkg.sha512",
     "C:\\Users\\dartw\\.nuget\\packages\\system.security.principal.windows\\4.7.0\\system.security.principal.windows.4.7.0.nupkg.sha512",
     "C:\\Users\\dartw\\.nuget\\packages\\system.valuetuple\\4.5.0\\system.valuetuple.4.5.0.nupkg.sha512",
-    "C:\\Users\\dartw\\.nuget\\packages\\telegram.bot\\20.0.0-alpha.1\\telegram.bot.20.0.0-alpha.1.nupkg.sha512"
+    "C:\\Users\\dartw\\.nuget\\packages\\telegram.bot\\20.0.0-alpha.1\\telegram.bot.20.0.0-alpha.1.nupkg.sha512",
+    "C:\\Users\\dartw\\.nuget\\packages\\microsoft.netcore.app.ref\\7.0.15\\microsoft.netcore.app.ref.7.0.15.nupkg.sha512",
+    "C:\\Users\\dartw\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\7.0.15\\microsoft.windowsdesktop.app.ref.7.0.15.nupkg.sha512",
+    "C:\\Users\\dartw\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\7.0.15\\microsoft.aspnetcore.app.ref.7.0.15.nupkg.sha512",
+    "C:\\Users\\dartw\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\7.0.15\\microsoft.netcore.app.host.win-x64.7.0.15.nupkg.sha512"
   ],
   "logs": []
 }

@@ -1,5 +1,5 @@
 ﻿using ElevenLabs;
-using English_bot;
+using ElevenLabs.Models;
 using OpenAI;
 using OpenAI.Managers;
 using OpenAI.ObjectModels;
@@ -11,6 +11,8 @@ using Telegram.Bot.Types.Enums;
 using File = System.IO.File;
 using MemoryStream = System.IO.MemoryStream;
 using Voice = ElevenLabs.Voices.Voice;
+
+namespace English_bot;
 
 public class Program
 {
@@ -49,12 +51,11 @@ public class Program
 
     private static void StartReceiving(TelegramBotClient client)
     {
-        var cancellationTokenSource = new CancellationTokenSource();
         var cancellationToken = new CancellationToken();
 
         var receiverOptions = new ReceiverOptions
         {
-            AllowedUpdates = new UpdateType[] { UpdateType.Message }
+            AllowedUpdates = new[] { UpdateType.Message }
         };
 
         client.StartReceiving(
@@ -88,9 +89,14 @@ public class Program
         {
             var stream = await DownloadVoice(client, cancellationToken, voiceFileId);
             var transcription = await GetTranscription(cancellationToken, stream);
-            var aiResponse = await GetResponseFromAiAndSendToUser(client, update, cancellationToken, transcription);
             
-            Console.WriteLine(aiResponse);
+            if (transcription != null)
+            {
+                var aiResponse = await GetResponseFromAiAndSendToUser(client, update, cancellationToken, transcription);
+            
+                Console.WriteLine(aiResponse);
+            }
+
             return;
         }
 
@@ -152,31 +158,30 @@ public class Program
         if (chatId != null)
         {
             var responseVoice = await TextToSpeech(message);
-            
-            using Stream stream = new MemoryStream(responseVoice);
+
+            await using Stream stream = new MemoryStream(responseVoice);
             
             await client.SendAudioAsync(
                 chatId: chatId,
                 audio: InputFile.FromStream(stream),
                 cancellationToken: cancellationToken);
             
-            //await client.SendTextMessageAsync(chatId, text: message, cancellationToken: cancellationToken);
+            await client.SendTextMessageAsync(chatId, text: message, cancellationToken: cancellationToken);
         }
     }
 
     private static async Task<byte[]> TextToSpeech(string text)
     {
-        var voiceClip = await _elevenLabsClient.TextToSpeechEndpoint.TextToSpeechAsync(text, _voice);
+        var voiceClip = await _elevenLabsClient?.TextToSpeechEndpoint.TextToSpeechAsync(text, _voice, model: Model.MultiLingualV2)!;
         return voiceClip.ClipData.ToArray();
     }
     
-    /*private static async Task TextToSpeech()
+    private static async Task TextToSpeech()
     {
         _elevenLabsClient = new ElevenLabsClient(Resources.ELEVENLABS_API_KEY);
         var text = "How are you?";
         var voice = (await _elevenLabsClient.VoicesEndpoint.GetAllVoicesAsync()).FirstOrDefault();
         var voiceClip = await _elevenLabsClient.TextToSpeechEndpoint.TextToSpeechAsync(text, voice);
         await File.WriteAllBytesAsync($"{voiceClip.Id}.mp3", voiceClip.ClipData.ToArray());
-    }*/
+    }
 }
-
